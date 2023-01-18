@@ -1,8 +1,16 @@
+import aspose.words as aw
 from googletrans import Translator
 from gtts import gTTS
 import os
 
-with open('test.txt', encoding="utf8") as file:
+path = input("Enter Your Path")
+print(path.find("."))
+doc = aw.Document("D:\Python\storybook\Muthu Raman.docx")
+doc.save("123.txt")
+
+print(path.find("."))
+
+with open("D:\Python\storybook\Muthu Raman.docx", encoding="utf8") as file:
     long = file.read()
 try:
     translator = Translator()
